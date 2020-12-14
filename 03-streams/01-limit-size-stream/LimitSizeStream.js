@@ -19,7 +19,7 @@ class LimitSizeStream extends stream.Transform {
        const resultString = `${chunk}`;
        callback(null, resultString);
       }else{
-      throw new LimitExceededError();
+        throw new LimitExceededError();
       }
     } catch (err) {
       callback(err);
